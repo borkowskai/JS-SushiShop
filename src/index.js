@@ -17,8 +17,8 @@ h2.innerText = 'Promotion du jour';
 fetch('assets/data/makis.json')
   .then((reponse) => reponse.json())
   .then((data) => {
-    const makis2 = data.makis2;
-	const randomMaki = makis2[random(makis2.length)];
+    const makisJson = data.makis2;
+	const randomMaki = makisJson[random(makisJson.length)];
 	header.innerHTML = `
 		<h2>Offre du jour</h2>
 		<figure>

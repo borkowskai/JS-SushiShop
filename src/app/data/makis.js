@@ -26,7 +26,7 @@ export const makis = [
     nom: 'concombre',
     prix: 0.8,
     description: 'un magnifique maki au concombre',
-    image: 'http://neo-samourai.fr/wp-content/uploads/2016/02/maki-concombre.png',
+    image: 'https://www.cuisinejaponaise.be/img/blog/kappa_maki.jpg',
   },
   {
     id: 4,
