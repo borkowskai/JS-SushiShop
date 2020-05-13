@@ -227,4 +227,5 @@ $(btnVid).on('click', function (e) {
 	e.preventDefault();
 	$(orders_list).empty();
 	document.getElementById('summaryPrice').innerHTML = 'Prix du panier: 0&euro;';
+	document.getElementById('reduction').innerHTML = '';
 });
