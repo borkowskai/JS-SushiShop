@@ -9,37 +9,10 @@ app.classList.add('container');
 //   ****************   HEADER   ************************
 
 const header = document.createElement('header');
-const h2 = document.createElement('h2');
-h2.innerText = 'Promotion du jour';
+const imgHeader = document.createElement('img');
+imgHeader.src = 'assets/images/sushi_board.png';
 
-//add random maki to header
-// random list added
-fetch('assets/data/makis.json')
-  .then((reponse) => reponse.json())
-  .then((data) => {
-    const makisJson = data.makis2;
-	const randomMaki = makisJson[random(makisJson.length)];
-	header.innerHTML = `
-		<h2>Offre du jour</h2>
-		<figure>
-			<img src="${randomMaki.image}" />
-		</figure>
-		<h3>${randomMaki.description}</h3>
-		<h5>prix par boite : ${randomMaki.prix * 8}&euro;</h5>
-	`;
-  });
-
-// // added by file maki.js
-//   const randomMaki = makis[random(makis.length)];
-// 	header.innerHTML = `
-// 		<h2>Offre du jour</h2>
-// 		<figure>
-// 			<img src="${randomMaki.image}" />
-// 		</figure>
-// 		<h3>${randomMaki.description}</h3>
-// 		<h5>prix par boite : ${randomMaki.prix * 8}&euro;</h5>
-// 	`;
-
+header.appendChild(imgHeader);
 app.appendChild(header);
 
 
@@ -48,6 +21,27 @@ app.appendChild(header);
 const h1 = document.createElement('h1');
 h1.innerText = 'les meilleurs makis a Bruxelles';
 app.appendChild(h1);
+
+
+const divRandomHeader = document.createElement('div');
+divRandomHeader.classList.add('divRandomHeader');
+
+//add random maki 
+// random list added
+fetch('assets/data/makis.json')
+  .then((reponse) => reponse.json())
+  .then((data) => {
+    const makisJson = data.makis2;
+	const randomMaki = makisJson[random(makisJson.length)];
+	divRandomHeader.innerHTML = `
+		<figure><img src="${randomMaki.image}" /></figure>
+		<div class="inter">
+			<h2>Offre du jour</h2>
+			<h3>${randomMaki.description}</h3>
+		</div>
+	`;
+  });
+app.appendChild(divRandomHeader);
 
 const sectionDemo = document.createElement('section');
 const divDemo = document.createElement('div');
@@ -59,6 +53,7 @@ let count = 0;
 for (const maki of makis) {
 	const divM = document.createElement('div');
 	divM.classList.add('sushiList');
+	divM.style.border = '1px dotted #666666';
 	divDemo.appendChild(divM);
 	// separate div for photo - flex
 	const figure = document.createElement('figure');
@@ -78,11 +73,6 @@ for (const maki of makis) {
 	const h4 = document.createElement('h4');
 	h4.innerText = maki.nom;
 
-	// //   -------------- BONUS  VEG GREEN BIRDER ---------------------
-	// if (h4.innerHTML === 'thon' || h4.innerHTML === 'saumon') {
-	// 	console.log('test');
-	// 	figure.style.border = '0px';
-	// }
 
 	divDes.appendChild(h4);
 
@@ -95,6 +85,12 @@ for (const maki of makis) {
 	btnA.setAttribute('type', 'submit');
 	btnA.id = `buttonA${maki.nom}`;
 
+	//   -------------- BONUS  VEG GREEN BIRDER ---------------------
+	if (h4.innerHTML === 'thon' || h4.innerHTML === 'saumon') {
+		figure.style.border = '0px outset #666666';
+	} else {
+		img.style.border = '3px outset  #39ac39'; 
+	}
 
 	//   --------------  ACTION ON CLICK ACHETER ---------------------
 	btnA.addEventListener('click', function () {
