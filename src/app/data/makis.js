@@ -5,7 +5,7 @@ export const makis = [
     prix: 0.9,
     description: 'un délicieux maki au saumon',
     image:
-      'http://img.facv.pmdstatic.net/fit/http.3A.2F.2Fdata.2Evodemotion.2Ecom.2F18947.2F18947.2Ejpg/1280x720/quality/80/comment-preparer-des-makis-au-saumon.jpg',
+      'https://www.sushiboutiklille.com/media/filled/w800h600/2ed7fb6f63257662045ac948a790f34109edd208.jpeg',
   },
   {
     id: 1,

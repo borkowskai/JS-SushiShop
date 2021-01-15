@@ -1,17 +1,20 @@
-## Question d'entretien d'embauche (sans l'ordinateur) - 1h - 20/100pts
+## First exercices of JavaScript without using HTML
 
-- Est-ce que JavaScript est un langage orienté objet ?
-- Est-ce qu'on peut faire des serveurs avec JavaScript ?
-- Quel est le scope des variables avec JavaScript ?
-- types primitifs vs objects ? quelle différence ?
-- Qu'est ce qu'une promesse (Promise) ?
-- Citez 2 grands framework JavaScript ? Qu'est ce qu'un framework ?
-- Citez 2 grandes librairies JavaScript. A quoi servent-elle ?
-- Que veut dire ES6 ?
-- Une fonction peut-elle prendre comme argument une fonction ?
-- Quel est votre langage de programmation préféré ?
+- CSS is allowed
 
-## Exercice - 5h - 80/100pts
+**The idea is :**
+- to make appear data with 100% JavaScript 
+- make the functional basket in JavaScript
+
+## Setup
+To open a project you need node module:
+
+```
+npm install
+npm start
+```
+
+## Steps of exercice
 
 Pour cette exercice, vous avez droit a toutes les sources d'information, mais pas à la communication.
 
